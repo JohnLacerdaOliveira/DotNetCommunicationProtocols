@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package countdown;
+
+// CLIENT STREAMING
+message ClientCountDownRequest {
+  int32 seconds = 1; // Number of seconds to count down
+}
+
+message ClientCountDownResponse {
+  string message = 1; // Message indicating the countdown status
+}
+
+
+// SERVER STREAMING
+message ServerCountDownRequest {
+  int32 seconds = 1; // Number of seconds to count down
+}
+
+message ServerCountDownResponse {
+  int32 message = 1; // Message indicating the countdown status
+}
+
+service CountDownService {
+  // Client starts and sends coundown, Server replies when count down reaches the end
+  rpc StartClientCountDown(stream  ClientCountDownRequest) returns (ClientCountDownResponse) {};
+
+   // Client sends amount of Seconds to coundown, Server starts a countdown from the specified number of seconds
+  rpc StartServerCountDown(ServerCountDownRequest) returns (stream ServerCountDownResponse) {};
+}

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPC.Client", "gRPC\Client\gRPC.Client.csproj", "{0BBF619E-A940-C559-25B2-DD9117D3B932}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gRPC", "gRPC", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Proto", "Proto", "{76F1F121-76EF-44C8-B42D-594A365394BB}"
+	ProjectSection(SolutionItems) = preProject
+		gRPC\Proto\Calculator.proto = gRPC\Proto\Calculator.proto
+		gRPC\Proto\CountDown.proto = gRPC\Proto\CountDown.proto
+		gRPC\Proto\Greeting.proto = gRPC\Proto\Greeting.proto
+		HealthCheck.proto = HealthCheck.proto
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPC.Server", "gRPC\Server\gRPC.Server.csproj", "{8AF5BBFE-EB57-6FA7-BB3F-145B96EF7553}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BBF619E-A940-C559-25B2-DD9117D3B932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BBF619E-A940-C559-25B2-DD9117D3B932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BBF619E-A940-C559-25B2-DD9117D3B932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BBF619E-A940-C559-25B2-DD9117D3B932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AF5BBFE-EB57-6FA7-BB3F-145B96EF7553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AF5BBFE-EB57-6FA7-BB3F-145B96EF7553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AF5BBFE-EB57-6FA7-BB3F-145B96EF7553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AF5BBFE-EB57-6FA7-BB3F-145B96EF7553}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0BBF619E-A940-C559-25B2-DD9117D3B932} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{76F1F121-76EF-44C8-B42D-594A365394BB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{8AF5BBFE-EB57-6FA7-BB3F-145B96EF7553} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40A66CFB-13CF-4E04-9791-068C627C01A5}
+	EndGlobalSection
+EndGlobal

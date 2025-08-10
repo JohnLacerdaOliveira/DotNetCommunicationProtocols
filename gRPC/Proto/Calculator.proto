@@ -1,0 +1,80 @@
+syntax = "proto3";
+
+package calculator;
+
+enum Operation {
+	ADD = 0;
+	SUBTRACT = 1;
+	MULTIPLY = 2;
+	DIVIDE = 3;
+}
+
+message SimpleCalculation{
+	double first_number = 1;
+	double second_number = 2;
+	Operation operation = 3; // e.g. Operation enum elements, "ADD", "SUBTRACT", "MULTIPLY", "DIVIDE"
+}
+
+message SimpleCalculationRequest {
+	SimpleCalculation calculation = 1;
+}
+
+message SimpleCalculationResponse {
+	double result = 1;
+	string error = 2; // For error messages, if any
+}
+
+message SquareRootRequest {
+	double number = 1; // The number to calculate the square root of
+}
+
+message SquareRootResponse {
+	double result = 1; // The square root of the number
+	string error = 2; // For error messages, if any
+}
+
+message PrimeFactorizationRequest {
+	int32 number = 1; // The number to decompose into prime factors
+}
+
+message PrimeFactorizationResponse {
+	int32 prime_factor = 1; // stream of prime factors of the number
+}
+
+message AverageCalculationRequest{
+	double number = 1;
+}
+
+message AverageCalculationResponse{
+	double average_result = 1; // The average of the numbers provided in the request
+}
+
+message FindCurrentMaxRequest {
+	double number = 1; // The number to be considered for the maximum calculation
+}
+
+message FindCurrentMaxResponse {
+	double max_value = 1; // The current maximum value found so far
+}
+
+service CalculatorService {
+	//Unary request
+	// Performs a calculation based on the provided request
+	rpc SimpleCalculation(SimpleCalculationRequest) returns (SimpleCalculationResponse) {};
+
+	//Unary request
+	// Performs a calculation based on the provided request
+	rpc SquareRoot(SquareRootRequest) returns (SquareRootResponse) {};
+
+	// Server-side streaming response
+	// Decomposes a number into its prime factors
+	rpc DecomposeIntoPrimes(PrimeFactorizationRequest) returns (stream PrimeFactorizationResponse){};
+
+	// Client-side streaming request
+	// CalculateAverage calculates the average of a stream of numbers
+	rpc AverageCalculation(stream AverageCalculationRequest) returns (AverageCalculationResponse){};
+
+	// Bidirectional streaming request
+	// Finds the current masimum value of a collection of numbers as they are streamed by the client
+	rpc FindCurrentMax(stream FindCurrentMaxRequest) returns (stream FindCurrentMaxResponse){};
+}
