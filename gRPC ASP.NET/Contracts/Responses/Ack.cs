@@ -1,6 +1,6 @@
 ﻿using ProtoBuf;
 
-namespace Contracts.Responses;
+namespace GrpcAspNet.Contracts.Responses;
 
 [ProtoContract]
 public class Ack

@@ -1,6 +1,6 @@
 ﻿using ProtoBuf;
 
-namespace Contracts.Messages;
+namespace GrpcAspNet.Contracts.Messages;
 
 [ProtoContract]
 public class ChatMessage

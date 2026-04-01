@@ -1,4 +1,4 @@
-﻿namespace Client
+﻿namespace GrpcAspNet.Client
 {
     internal class Program
     {

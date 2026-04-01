@@ -1,10 +1,10 @@
-﻿using Contracts.Messages;
-using Contracts.Requests;
-using Contracts.Responses;
-using Contracts.Services;
+﻿using GrpcAspNet.Contracts.Messages;
+using GrpcAspNet.Contracts.Requests;
+using GrpcAspNet.Contracts.Responses;
+using GrpcAspNet.Contracts.Services;
 using ProtoBuf.Grpc;
 
-namespace Server.Services;
+namespace GrpcAspNet.Server.Services;
 
 public class ChatService : IChatService
 {

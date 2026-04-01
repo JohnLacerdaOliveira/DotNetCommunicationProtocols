@@ -1,10 +1,10 @@
-﻿using Contracts.Messages;
-using Contracts.Requests;
-using Contracts.Responses;
+﻿using GrpcAspNet.Contracts.Messages;
+using GrpcAspNet.Contracts.Requests;
+using GrpcAspNet.Contracts.Responses;
 using ProtoBuf.Grpc;
 using ProtoBuf.Grpc.Configuration;
 
-namespace Contracts.Services;
+namespace GrpcAspNet.Contracts.Services;
 
 [Service]
 public interface IChatService

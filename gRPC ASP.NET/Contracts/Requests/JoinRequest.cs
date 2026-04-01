@@ -1,9 +1,9 @@
 ﻿using ProtoBuf;
 
-namespace Contracts.Requests;
+namespace GrpcAspNet.Contracts.Requests;
 
 [ProtoContract]
-public class SubscribeRequest
+public class JoinRequest
 {
     [ProtoMember(1)]
     public string Username { get; set; } = "";

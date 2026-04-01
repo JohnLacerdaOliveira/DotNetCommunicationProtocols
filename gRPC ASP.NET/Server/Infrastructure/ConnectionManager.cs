@@ -1,8 +1,8 @@
-﻿using Contracts.Messages;
+﻿using GrpcAspNet.Contracts.Messages;
 using System.Collections.Concurrent;
 using System.Threading.Channels;
 
-namespace Server.Infrastructure;
+namespace GrpcAspNet.Server.Infrastructure;
 
 public class ConnectionManager
 {
