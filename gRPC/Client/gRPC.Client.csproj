@@ -23,21 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="SSL\ca.crt" />
-    <None Remove="SSL\client.crt" />
-    <None Remove="SSL\client.key" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="SSL\ca.crt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SSL\client.crt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SSL\client.key">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <Compile Remove="SSL\**" />
+    <EmbeddedResource Remove="SSL\**" />
+    <None Remove="SSL\**" />
   </ItemGroup>
 
 </Project>
